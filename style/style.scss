@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Great+Vibes');
+
+//VARS
+$primary-color: #2C348D;
+$secondary-color: #B23634;
+$accent-font: 'Great Vibes',
+cursive;
+
+
+//GLOBAL
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: $accent-font;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+
+.accent1 {
+    color: $primary-color;
+}
+
+.accent2 {
+    color: $secondary-color;
+}
+
+.btn {
+    box-shadow: none !important;
+}
+
+.btn-primary {
+    background: $primary-color !important;
+    border: none;
+    padding: .5rem 3rem;
+}
+
+.btn-primary:hover {
+    background: $secondary-color !important;
+}
+
+.card {
+    width: 100%;
+    flex: 1;
+}
+
+.card-text {
+    flex: 1;
+
+    a {
+        margin-bottom: 2rem;
+    }
+}
+
+.card-body {
+    img {
+        height: 2.5rem;
+        transform: scaleX(-1);
+    }
+}
+
+// NAV
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:active {
+    background: $secondary-color !important;
+}
+
+
+.navbar-brand img {
+    width: 9rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 1.5rem !important;
+}
+
+.nav-link:hover {
+    color: $secondary-color !important;
+    transition: .4s
+}
+
+.current {
+    color: $primary-color !important;
+}
+
+.navbar-nav {
+    .active {
+        .nav-link {
+            color: $secondary-color !important;
+        }
+    }
+}
+
+//SHOWCASE
+.jumbotron {
+    height: 100vh;
+    background-image: url("../imgs/showcase.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    img {
+        width: 8rem;
+    }
+}
+
+//CAROUSEL
+.carousel {
+    background: $primary-color;
+    max-width: 45rem;
+    margin: 0 auto
+}
+
+.carousel-item {
+    img {
+        max-height: 500px;
+    }
+}
+
+//HOURS/LOCATION
+.hours {
+    background: $primary-color;
+
+    li {
+        font-size: 1.3rem;
+        color: white;
+        line-height: 2;
+        border-bottom: 1px dotted white;
+    }
+}
+
+.contact {
+    a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding: .3rem 0;
+    }
+
+    a:hover {
+        color: $secondary-color !important;
+        transition: .4s;
+    }
+}
+
+//FOOTER
+footer {
+    background: rgb(28, 34, 92);
+
+    p {
+        margin: 0;
+    }
+
+    i {
+        color: #fff;
+        padding: 0 1rem;
+    }
+}
+
+.footer-copyright {
+    background: #2C348D;
+    color: #fff;
+
+    a {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+}
+
+.fa-facebook-f:hover {
+    color: #3656A7;
+    transition: .4s;
+}
+
+.fa-twitter:hover {
+    color: #52A8F8;
+    transition: .4s;
+}
+
+.fa-google-plus-g:hover {
+    color: #E24C44;
+    transition: .4s;
+}
+
+.fa-linkedin-in:hover {
+    color: #3A77C6;
+    transition: .4s;
+}
+
+.fa-instagram:hover {
+    color: #8a3ab9;
+    transition: .4s;
+}
+
+.fa-pinterest:hover {
+    color: #EB3D38;
+    transition: .4s;
+}
+
+//BOOKING
+.booking {
+    background: $secondary-color url('../imgs/booking.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: 75.23px;
+}
+
+.booking .container {
+    background: #fff;
+    margin: 5rem auto;
+    padding: 0 3rem;
+
+    input {
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: 1px solid;
+        border-radius: 0%;
+    }
+
+    input:focus {
+        box-shadow: none;
+        border-color: $secondary-color;
+    }
+
+    select {
+        margin-bottom: 1rem;
+    }
+
+    label {
+        font-weight: bold;
+    }
+}
+
+//MEDIA QUERIES
+//TABLETS
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    #navbarNav {
+        margin: 0 !important;
+    }
+
+    .nav-link {
+        line-height: 3;
+        display: block;
+    }
+
+    .jumbotron {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .employee {
+        flex-direction: column;
+        margin-bottom: 5rem;
+
+        .card {
+            order: 1;
+        }
+
+        .card-text {
+            order: 2;
+        }
+
+        .card,
+        .card-text {
+            margin: 0 !important;
+        }
+
+    }
+
+    .services {
+        flex-direction: column;
+
+        .services-card {
+            margin: 1.5rem 0 !important;
+        }
+    }
+
+    .hours-location {
+        flex-direction: column;
+
+        .hours,
+        .location {
+            width: 100% !important;
+        }
+
+        .location {
+            height: 25rem !important;
+        }
+    }
+
+    i {
+        font-size: 2rem !important;
+        padding: 0 1rem;
+    }
+
+    footer {
+        margin: 0 !important;
+    }
+
+}
+
+//PHONES
+@media (max-width: 576px) {
+    .btn {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    i {
+        padding: 0 .3rem !important;
+    }
+
+    .contact i,
+    .contact a {
+        font-size: 1.2rem !important;
+    }
+}
